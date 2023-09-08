@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using LibraryDAL.Model;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,10 +7,6 @@ using System.Reflection.Emit;
 
 namespace LibraryDAL
 {
-    public class ApplicationUser : IdentityUser
-    {
-        public bool Status { get; set; }
-    }
 
     public class MyDBContext : IdentityDbContext<ApplicationUser>
     {
@@ -31,6 +27,11 @@ namespace LibraryDAL
         {
             base.OnModelCreating(builder);
         }
-
+        public DbSet<BookAuthor> BookAuthors { get; set; }
+        public DbSet<BookCategory> BookCategories { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<SystemOperator> SystemOperators { get; set; }
+        public DbSet<StudentBookRequest> StudentBookRequests { get; set; }
     }
 }
