@@ -24,8 +24,12 @@ namespace LibraryDAL
             if (!optionsBuilder.IsConfigured)
             {
                 // Use the connection string from appsettings.json
-                optionsBuilder.UseSqlServer(_myAppSettingsConfig.GetConnectionString("ABCDatabase"));
+                optionsBuilder.UseSqlServer(_myAppSettingsConfig.GetConnectionString("DefaultConnection"));
             }
+        }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
         }
 
     }
