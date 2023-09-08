@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryDAL\LibraryDAL.csproj" />
+  </ItemGroup>
+
 </Project>

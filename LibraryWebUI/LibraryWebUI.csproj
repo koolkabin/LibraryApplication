@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LibraryBAL\LibraryBAL.csproj" />
     <ProjectReference Include="..\LibraryDAL\LibraryDAL.csproj" />
   </ItemGroup>
 
