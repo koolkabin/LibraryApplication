@@ -11,6 +11,7 @@ namespace LibraryDAL
     public class MyDBContext : IdentityDbContext<ApplicationUser>
     {
         private readonly IConfiguration _myAppSettingsConfig;
+
         public MyDBContext(IConfiguration configFromAppSettings)
         {
             _myAppSettingsConfig = configFromAppSettings;
